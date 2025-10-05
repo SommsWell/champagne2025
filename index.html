@@ -2,123 +2,217 @@
 <html lang="nl">
 <head>
   <meta charset="utf-8" />
-  <title>Champagne Weekend – Overlegprogramma</title>
+  <title>Champagne Weekend</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
   <style>
     :root{
-      --gold:#c6a85b; --ink:#14213d; --muted:#6b7280; --line:#e5e7eb;
+      --gold:#c6a85b; --ink:#14213d; --muted:#6b7280; --line:#e5e7eb; --bg:#fff; --chip:#f6f6f6;
+      --soft:#fafafa; --accent:#0a58ca;
     }
-    html,body{margin:0;padding:0;background:#fff;color:#111;font:14px/1.55 "Segoe UI",Roboto,Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:#111;font:14px/1.6 "Segoe UI",Roboto,Arial,Helvetica,sans-serif}
     .wrap{max-width:900px;margin:28px auto;padding:0 24px}
-    h1{font-size:28px;line-height:1.2;margin:0 0 10px;color:var(--gold)}
-    .sub{color:var(--muted);margin:0 0 22px}
-    h2{font-size:18px;margin:26px 0 8px;color:var(--ink)}
+    .printbar{display:flex;justify-content:flex-end;gap:10px;margin-bottom:12px}
+    .btn{border:1px solid var(--line);background:var(--soft);padding:8px 12px;border-radius:10px;cursor:pointer}
+    .btn:hover{background:#f0f0f0}
+    header{
+      border:1px solid var(--line); border-radius:16px; padding:18px; margin-bottom:20px;
+      background:linear-gradient(180deg,#fff,#fbfbfb);
+    }
+    h1{font-size:30px;margin:0 0 6px;color:var(--ink)}
+    h2{font-size:18px;margin:0 0 10px;color:var(--ink);display:flex;align-items:center;gap:10px}
+    h2 .emoji{font-size:18px}
     p{margin:6px 0}
-    .card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
-    .grid{display:grid;gap:14px}
-    .muted{color:var(--muted)}
-    a{color:#0a58ca;text-decoration:none}
+    a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
+    .muted{color:var(--muted)}
+    .badge{display:inline-block;background:#f5f5f5;border:1px solid var(--line);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px;color:#444}
+    .card{border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:16px 0;background:#fff}
+    .timeline{margin:6px 0 0;padding:0;list-style:none;position:relative}
+    .timeline li{display:grid;grid-template-columns:84px 1fr;gap:12px;align-items:start;padding:10px 0;border-bottom:1px dashed var(--line)}
+    .timeline li:last-child{border-bottom:none}
+    .time{font-weight:600;color:var(--ink);white-space:nowrap}
+    .item .title{margin:0 0 2px}
+    .item .note{margin:0;color:var(--muted);font-size:13px}
     .costs{width:100%;border-collapse:collapse;margin-top:4px}
     .costs th,.costs td{border:1px solid var(--line);padding:10px}
     .costs thead th{background:#f7f7f7;text-align:left}
     .right{text-align:right}
-    .badge{display:inline-block;background:#f5f5f5;border:1px solid var(--line);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px;color:#444}
-    .printbar{display:flex;justify-content:flex-end;gap:10px;margin-bottom:10px}
-    .btn{border:1px solid var(--line);background:#fafafa;padding:8px 12px;border-radius:8px;cursor:pointer}
-    .btn:hover{background:#f0f0f0}
-    /* Print (A4) */
     @page{size:A4;margin:16mm}
     @media print{
       .printbar{display:none}
       a[href^="http"]::after{content:""}
       .wrap{margin:0;padding:0;max-width:none}
       body{font-size:12pt}
+      header{border:none;border-bottom:1px solid var(--line);border-radius:0}
+      .card{break-inside:avoid}
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="printbar">
-      <button class="btn" onclick="window.print()">Print</button>
+      <button class="btn" onclick="window.print()">🖨️ Print</button>
     </div>
 
-    <h1>🍾 Champagne Weekend – Overlegprogramma</h1>
-    <p class="sub">Afdrukversie voor overleg</p>
+    <header>
+      <h1>🍾 Champagne Weekend</h1>
+    </header>
 
-    <div class="card">
-      <h2>📍 Praktisch</h2>
+    <section class="card">
+      <h2><span class="emoji">📍</span> Praktisch</h2>
       <p>• <strong>Lakens en handdoeken</strong>: inbegrepen in het verblijf</p>
       <p>• <strong>Data</strong>: vrijdag 10 → zondag 12 oktober 2025</p>
-      <p>• <strong>Meebrengen:</strong> 2 leuke flessen</p>
+      <p>• <strong>Meebrengen</strong>: 2 leuke flessen</p>
       <p>• <strong>Locatie verblijf</strong>:
         <a href="https://maps.app.goo.gl/evnPdnL1g1yQhvs3A">
           Domaine AD COUTELAS – Villa Louis Victor, 557 Av. du Général Leclerc, 51530 Dizy
         </a>
+        <span class="badge">🧭 Google Maps</span>
       </p>
-    </div>
+    </section>
 
-    <div class="grid">
-      <div class="card">
-        <h2>🗓 Vrijdag 10 oktober</h2>
-        <p><strong>Vanaf 16 u</strong>: Aankomst in Villa Louis Victor (Dizy)</p>
-        <p><strong>Aperitief</strong>: Champagne & huisgemaakte hapjes</p>
-        <p><strong>Avondeten</strong>: 🍝 Homemade pasta pomodoro</p>
-        <p class="muted">Vrije avond – ontspanning</p>
-      </div>
+    <section class="card">
+      <h2><span class="emoji">🗓</span> Vrijdag 10 oktober</h2>
+      <ul class="timeline">
+        <li>
+          <div class="time">16:00</div>
+          <div class="item">
+            <p class="title"><strong>Check-in</strong> – Villa Louis Victor (Dizy)</p>
+            <p class="note">installeren, kamers verdelen.</p>
+          </div>
+        </li>
+        <li>
+          <div class="time">Aperitief</div>
+          <div class="item"><p class="title">🥂 Champagne & huisgemaakte hapjes</p></div>
+        </li>
+        <li>
+          <div class="time">Avond</div>
+          <div class="item">
+            <p class="title">🍝 Homemade bolognese/pomodoro – pasta</p>
+            <p class="note">Activiteiten: blind tasting</p>
+          </div>
+        </li>
+      </ul>
+    </section>
 
-      <div class="card">
-        <h2>🗓 Zaterdag 11 oktober</h2>
-        <p><strong>11 u – 14 u</strong>:
-          <a href="https://www.google.com/maps/place/Cave+%C3%A0+Manger+%26+Chambre+d'h%C3%B4te+-+Domaine+La+Grange+Le+Comte/@48.9786504,3.8693316,15z/data=!4m2!3m1!1s0x0:0x91926e6f9f69fde2?sa=X&ved=2ahUKEwi6sYSsv7-DAxU5SaQEHR3JCNUQ_BJ6BAhREAA">
-            Maison Cuillier – De Sloovere, La Grande Grange Le Comte, RD 951, 51530 Brugny-Vaudancourt
-          </a>
-          <span class="badge">Bezoek + lunch (eind ± 14 u)</span>
-        </p>
+    <section class="card">
+      <h2><span class="emoji">🗓</span> Zaterdag 11 oktober</h2>
+      <ul class="timeline">
+        <li><div class="time">09:00</div><div class="item"><p class="title"><strong>Depart!</strong></p></div></li>
+        <li><div class="time">09:30–10:30</div><div class="item"><p class="title">🍾 Bezoek producent — <em>to be confirmed</em></p></div></li>
+        <li>
+          <div class="time">11:00–14:00</div>
+          <div class="item">
+            <p class="title">
+              <a href="https://maps.app.goo.gl/NL3DK8XwUNBsRLNH9">Maison Cuillier – De Sloovere, Brugny-Vaudancourt</a>
+              <span class="badge">Bezoek + lunch</span>
+            </p>
+          </div>
+        </li>
+        <li><div class="time">15:30</div><div class="item"><p class="title">🍾 Bezoek <strong>Gobillard</strong><span class="note"> — ter info: bij aankoop van 3 flessen is tasting gratis</span></p></div></li>
+        <li><div class="time">17:00</div><div class="item"><p class="title">🍾 Bezoek <strong>Producent</strong> — <em>to be confirmed</em></p></div></li>
+        <li>
+          <div class="time">18:00</div>
+          <div class="item">
+            <p class="title">Terug naar villa</p>
 
-        <p><strong>Namiddag – voorstellen (te bespreken)</strong>:</p>
-        <p>• 🍾 Bezoek <strong>Gobillard</strong> <span class="muted">(suggestie Jonas)</span></p>
-        <p>• 🥾 Wandeling + bezoek <strong>Pierson Cuvelier</strong> <span class="muted">(suggestie Ken)</span></p>
-        <p>• 🍷 Producent in <strong>Bouzy</strong> <span class="muted">(Manuel: Pinot Noir)</span></p>
-        <p>• (Optioneel: nog één extra producent toevoegen?)</p>
+            <!-- Bring out your inner chef – CTA block (zonder stappen) -->
+            <section class="chef-cta" aria-labelledby="chef-title-cta">
+              <style>
+                .chef-cta{
+                  --gold:#c6a85b; --ink:#14213d; --muted:#6b7280; --line:#e5e7eb; --bg:#fff;
+                  border:1px solid var(--line);
+                  border-radius:16px;
+                  padding:20px 18px;
+                  margin:16px 0;
+                  background:
+                    radial-gradient(12px 12px at 20% 30% / 8% 8%, rgba(198,168,91,.12) 0 30%, transparent 31%) ,
+                    radial-gradient(10px 10px at 75% 65% / 8% 8%, rgba(198,168,91,.10) 0 30%, transparent 31%) ,
+                    linear-gradient(180deg,#fff, #fbfbfb 70%);
+                  position:relative;
+                  overflow:hidden;
+                }
+                .chef-cta:before{
+                  content:"";
+                  position:absolute; inset:-1px;
+                  border-radius:16px;
+                  padding:1px;
+                  background:linear-gradient(45deg, rgba(198,168,91,.6), rgba(20,33,61,.25));
+                  -webkit-mask:
+                    linear-gradient(#000 0 0) content-box,
+                    linear-gradient(#000 0 0);
+                  -webkit-mask-composite: xor; mask-composite: exclude;
+                  pointer-events:none;
+                }
+                .chef-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+                .chef-icon{font-size:22px;line-height:1}
+                .chef-title{margin:0;font-size:20px;color:var(--ink)}
+                .chef-lead{margin:0 0 10px;color:var(--muted)}
+                .chef-body p{margin:6px 0}
+                .chef-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+                .chef-tag{
+                  display:inline-flex;align-items:center;gap:6px;
+                  font-size:12px;color:#444;
+                  background:#f6f6f6;border:1px solid var(--line);
+                  padding:4px 10px;border-radius:999px;
+                }
+                .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);display:inline-block}
+                @media print{
+                  .chef-cta{background:#fff}
+                  .chef-cta:before{display:none}
+                }
+              </style>
 
-        <p><strong>Avond</strong>: terug naar villa rond 18 u → samen avondeten maken</p>
-      </div>
+              <div class="chef-head">
+                <div class="chef-icon">🍳</div>
+                <h3 id="chef-title-cta" class="chef-title">Bring out your inner chef!</h3>
+              </div>
 
-      <div class="card">
-        <h2>🗓 Zondag 12 oktober</h2>
-        <p><strong>VOORSTEL te bespreken10u30 – 14u</strong>:
-          <a href="https://maps.app.goo.gl/PtHt21NM91idy4S79">
-            Le Clos Corbier, 5 Rue Gambetta, 51160 Aÿ-Champagne
-          </a>
-          <span class="badge">Bezoek + lunch — € 85 p.p.</span>
-        </p>
-      </div>
-    </div>
+              <p class="chef-lead">Zaterdagavond draait alles om creativiteit en smaak.</p>
 
-    <div class="card">
-      <h2>💶 Kostenoverzicht (voorlopig)</h2>
+              <div class="chef-body">
+                <p>Iedereen krijgt een fles wijn — <em>wit, rood of bubbels</em> — en de uitdaging is om er een gerecht bij te bedenken en te maken.</p>
+                <p><strong>Geen stress, geen wedstrijd:</strong> gewoon plezier, improvisatie en teamwork.</p>
+                <h3 id="chef-title-cta" class="chef-title" 
+    style="
+      display:inline-block;
+      background:linear-gradient(90deg,#c6a85b20,#c6a85b30);
+      border-left:4px solid #c6a85b;
+      padding:6px 12px;
+      border-radius:8px;
+      font-size:17px;
+      color:#14213d;
+      margin-top:10px;
+    ">
+  + 🧠  Wijn Quiz <span style="color:#6b7280;">| niveau WSET 4 (haha)</span>
+</h3>
+
+              </div>
+            </section>
+            <!-- /chef-cta -->
+
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="emoji">🗓</span> Zondag 12 oktober</h2>
+      <ul class="timeline">
+        <li><div class="time">10:00</div><div class="item"><p class="title"><strong>Check-out</strong></p></div></li>
+        <li><div class="time">10:30–14:00</div><div class="item"><p class="title">Activiteit — <em>to be confirmed</em></p></div></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2><span class="emoji">💶</span> Kostenoverzicht (voorlopig)</h2>
       <table class="costs">
-        <thead>
-          <tr><th>Kost</th><th>Omschrijving</th><th class="right">Prijs p.p.</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>🏠 Verblijf (1p-kamer)</td><td>2 nachten @ Domaine AD Coutelas</td><td class="right">€ 207</td></tr>
-          <tr><td>🏠 Verblijf (2p-kamer)</td><td>2 nachten @ Domaine AD Coutelas</td><td class="right">€ 138</td></tr>
-          <tr><td>🥂 Cuillier – De Sloovere</td><td>Bezoek + lunch</td><td class="right">€ 45</td></tr>
-          <tr><td>🍷 Le Clos Corbier</td><td>Bezoek + lunch</td><td class="right">€ 85</td></tr>
-          <tr><td>🍽 Overige maaltijden</td><td>nog te berekenen</td><td class="right">—</td></tr>
-          <tr><td>💰 Totaal</td><td>voorlopig overzicht</td><td class="right">TBD</td></tr>
-        </tbody>
+        <thead><tr><th>Post</th><th class="right">Bedrag</th></tr></thead>
+        <tbody><tr><td>🏠 Voorschot</td><td class="right">€ 250</td></tr></tbody>
       </table>
-    </div>
-
-    <div class="card">
-      <h2>❓ Open punten voor overleg</h2>
-      <p>• Wat eten we zaterdagavond?</p>
-      <p>• Extra producent(en) toevoegen?</p>
-      <p>• Totale kostprijsberekening</p>
-    </div>
+    </section>
   </div>
 </body>
 </html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <title>Champagne Weekend – Overlegprogramma</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root{
+      --gold:#c6a85b; --ink:#14213d; --muted:#6b7280; --line:#e5e7eb;
+    }
+    html,body{margin:0;padding:0;background:#fff;color:#111;font:14px/1.55 "Segoe UI",Roboto,Arial,Helvetica,sans-serif}
+    .wrap{max-width:900px;margin:28px auto;padding:0 24px}
+    h1{font-size:28px;line-height:1.2;margin:0 0 10px;color:var(--gold)}
+    .sub{color:var(--muted);margin:0 0 22px}
+    h2{font-size:18px;margin:26px 0 8px;color:var(--ink)}
+    p{margin:6px 0}
+    .card{border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:14px 0}
+    .grid{display:grid;gap:14px}
+    .muted{color:var(--muted)}
+    a{color:#0a58ca;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .costs{width:100%;border-collapse:collapse;margin-top:4px}
+    .costs th,.costs td{border:1px solid var(--line);padding:10px}
+    .costs thead th{background:#f7f7f7;text-align:left}
+    .right{text-align:right}
+    .badge{display:inline-block;background:#f5f5f5;border:1px solid var(--line);padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px;color:#444}
+    .printbar{display:flex;justify-content:flex-end;gap:10px;margin-bottom:10px}
+    .btn{border:1px solid var(--line);background:#fafafa;padding:8px 12px;border-radius:8px;cursor:pointer}
+    .btn:hover{background:#f0f0f0}
+    /* Print (A4) */
+    @page{size:A4;margin:16mm}
+    @media print{
+      .printbar{display:none}
+      a[href^="http"]::after{content:""}
+      .wrap{margin:0;padding:0;max-width:none}
+      body{font-size:12pt}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="printbar">
+      <button class="btn" onclick="window.print()">Print</button>
+    </div>
+
+    <h1>🍾 Champagne Weekend – Overlegprogramma</h1>
+    <p class="sub">Afdrukversie voor overleg</p>
+
+    <div class="card">
+      <h2>📍 Praktisch</h2>
+      <p>• <strong>Lakens en handdoeken</strong>: inbegrepen in het verblijf</p>
+      <p>• <strong>Data</strong>: vrijdag 10 → zondag 12 oktober 2025</p>
+      <p>• <strong>Locatie verblijf</strong>:
+        <a href="https://www.google.com/maps?q=557+Av.+du+G%C3%A9n%C3%A9ral+Leclerc,+51530+Dizy" target="_blank" rel="noopener">
+          Domaine AD COUTELAS – Villa Louis Victor, 557 Av. du Général Leclerc, 51530 Dizy
+        </a>
+      </p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>🗓 Vrijdag 10 oktober</h2>
+        <p><strong>Vanaf 16 u</strong>: Aankomst in Villa Louis Victor (Dizy)</p>
+        <p><strong>Aperitief</strong>: Champagne & huisgemaakte hapjes</p>
+        <p><strong>Avondeten</strong>: 🍝 Homemade pasta pomodoro</p>
+        <p class="muted">Vrije avond – ontspanning & planning voor zaterdag</p>
+      </div>
+
+      <div class="card">
+        <h2>🗓 Zaterdag 11 oktober</h2>
+        <p><strong>11 u – 14 u</strong>:
+          <a href="https://www.google.com/maps?q=La+Grande+Grange+Le+Comte,+RD+951,+51530+Brugny-Vaudancourt" target="_blank" rel="noopener">
+            Maison Cuillier – De Sloovere, La Grande Grange Le Comte, RD 951, 51530 Brugny-Vaudancourt
+          </a>
+          <span class="badge">Bezoek + lunch (eind ± 14 u)</span>
+        </p>
+
+        <p><strong>Namiddag – voorstellen (te bespreken)</strong>:</p>
+        <p>• 🍾 Bezoek <strong>Gobillard</strong> <span class="muted">(suggestie Jonas)</span></p>
+        <p>• 🥾 Wandeling + bezoek <strong>Pierson Cuvelier</strong> <span class="muted">(suggestie Ken)</span></p>
+        <p>• 🍷 Producent in <strong>Bouzy</strong> <span class="muted">(Manuel: Pinot Noir)</span></p>
+        <p>• (Optioneel: nog één extra producent toevoegen?)</p>
+
+        <p><strong>Avond</strong>: terug naar villa rond 18 u → samen avondeten maken</p>
+      </div>
+
+      <div class="card">
+        <h2>🗓 Zondag 12 oktober</h2>
+        <p><strong>10u30 – 14u</strong>:
+          <a href="https://www.google.com/maps?q=5+Rue+Gambetta,+51160+A%C3%BF-Champagne" target="_blank" rel="noopener">
+            Le Clos Corbier, 5 Rue Gambetta, 51160 Aÿ-Champagne
+          </a>
+          <span class="badge">Bezoek + lunch — € 85 p.p.</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>💶 Kostenoverzicht (voorlopig)</h2>
+      <table class="costs">
+        <thead>
+          <tr><th>Kost</th><th>Omschrijving</th><th class="right">Prijs p.p.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>🏠 Verblijf (1p-kamer)</td><td>2 nachten @ Domaine AD Coutelas</td><td class="right">€ 207</td></tr>
+          <tr><td>🏠 Verblijf (2p-kamer)</td><td>2 nachten @ Domaine AD Coutelas</td><td class="right">€ 138</td></tr>
+          <tr><td>🥂 Cuillier – De Sloovere</td><td>Bezoek + lunch</td><td class="right">€ 45</td></tr>
+          <tr><td>🍷 Le Clos Corbier</td><td>Bezoek + lunch</td><td class="right">€ 85</td></tr>
+          <tr><td>🍽 Overige maaltijden</td><td>nog te berekenen</td><td class="right">—</td></tr>
+          <tr><td>💰 Totaal</td><td>voorlopig overzicht</td><td class="right">TBD</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>❓ Open punten voor overleg</h2>
+      <p>• Wat eten we zaterdagavond?</p>
+      <p>• Extra producent(en) toevoegen?</p>
+      <p>• Totale kostprijsberekening</p>
+    </div>
+  </div>
+</body>
+</html>

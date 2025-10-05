@@ -1,1 +1,1 @@
-](https://sommswell.github.io/champagne2025)
+[](https://sommswell.github.io/champagne2025)]
